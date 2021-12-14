@@ -17,7 +17,11 @@ class Game {
   }
 
   player1Mark() {
-    return new Game();
+    if (this._player1Score === 30) {
+      return new Game(40, 0);
+    } else {
+      return new Game(this._player1Score + 15, 0);
+    }
   }
 
   player2Mark() {
